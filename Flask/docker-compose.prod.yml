@@ -1,0 +1,55 @@
+version: '3'
+
+services:
+  web:
+    image: traefik:latest
+    ports:
+      - 80:80
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command:
+      - --entrypoints.web.address=:80
+      - --providers.docker=true
+      - --accesslog.filepath=/logs/access.log
+    labels:
+      - traefik.enable=false
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      args:
+        PYTHON_VERSION: '3.10'
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=app
+      - MYSQL_DATABASE=app
+      - BIND_ADDR=0.0.0.0
+    depends_on:
+      - db
+    restart: unless-stopped
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.app.entrypoints=web
+      - traefik.http.routers.app.rule=HostRegexp(`localhost`)
+      - traefik.http.routers.app.service=app
+      - traefik.http.services.app.loadbalancer.server.port=5000
+  
+  db:
+    image: mariadb:10
+    environment:
+      - MARIADB_RANDOM_ROOT_PASSWORD=yes
+      - MARIADB_USER=app
+      - MARIADB_DATABASE=app
+      - MARIADB_PASSWORD=app
+    ports:
+      - 3306:3306
+    volumes:
+      - ./src/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - db-data:/var/lib/mysql
+    labels:
+      - traefik.enable=false
+
+volumes:
+  db-data:
