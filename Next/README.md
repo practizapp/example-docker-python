@@ -43,3 +43,8 @@ No environment variables available.
 | Key | Description |
 | --- | --- |
 | `NODE_VERSION` | The version of Node.js that will be used for building this image. |
+
+## Screenshots
+
+![Welcome](.assets/next_welcome.png)
+![Api](.assets/next_api.png)

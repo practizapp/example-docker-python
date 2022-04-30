@@ -1,8 +1,7 @@
 ARG NODE_VERSION
 FROM node:${NODE_VERSION} as builder
 USER node
-ENV NODE_ENV=development
-COPY . /home/node
+COPY --chown=node:node . /home/node
 WORKDIR /home/node
 RUN set -ex; \
     npm install; \
