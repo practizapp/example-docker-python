@@ -10,4 +10,5 @@ RUN pip install -r /app/requirements.txt; \
 COPY --chown=app:app . /app/
 ENV DEBUG=True
 USER app
+EXPOSE 8000
 CMD [ "./manage.py", "runserver", "0.0.0.0:8000" ]
