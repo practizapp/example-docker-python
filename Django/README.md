@@ -22,8 +22,8 @@ docker compose up --build
 
 ```
 docker compose --file docker-compose.prod.yml build
-docker compose --file docker-compose.prod.yml migrate
-docker compose --file docker-compose.prod.yml collectstatic
+docker compose --file docker-compose.prod.yml run app python manage.py migrate
+docker compose --file docker-compose.prod.yml run app python manage.py collectstatic
 docker compose --file docker-compose.prod.yml up
 ```
 
