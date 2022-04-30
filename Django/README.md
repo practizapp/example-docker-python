@@ -51,3 +51,5 @@ Docker images can be customized using environment variables or customized during
 ## Screenshots
 
 ![Login Page](.assets/django_admin_login.png)
+
+![Docker logs](.assets/django_logs.png)
