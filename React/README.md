@@ -37,3 +37,6 @@ No environment variables available.
 | Key | Description |
 | --- | --- |
 | `NODE_VERSION` | The version of Node.js that will be used for building this image. |
+
+![Hello](.assets/react_welcome.png)
+![Docker logs](.assets/react_logs.png)
