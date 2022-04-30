@@ -37,3 +37,8 @@ No environment variables available.
 | Key | Description |
 | --- | --- |
 | `NODE_VERSION` | The version of Node.js that will be used for building this image. |
+
+## Screenshots
+
+![Hello World](.assets/express_hello.png)
+![Docker logs](.assets/express_logs.png)
