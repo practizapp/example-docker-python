@@ -8,4 +8,5 @@ RUN pip install -r /app/requirements.txt
 COPY --chown=app:app ./src/ /app/
 ENV FLASK_ENV=development
 USER app
+EXPOSE 5000
 CMD ["./main.py"]

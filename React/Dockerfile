@@ -1,12 +1,11 @@
 ARG NODE_VERSION
 FROM node:${NODE_VERSION} as builder
-ARG NODE_ENV
 COPY . /usr/src/app
 WORKDIR /usr/src/app
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
 RUN set -ex; \
     npm install; \
-    npm run build; \
-    ls -la build/
+    npm run build
 
 FROM nginx:alpine
 COPY --from=builder /usr/src/app/build /build
