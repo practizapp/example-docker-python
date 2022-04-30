@@ -1,6 +1,6 @@
 # Example Flask Docker
 
-This is a view counter app that is written in Python using [Flask](https://flask.palletsprojects.com/) framework, packaged using [Docker](https://www.docker.com/).
+This is a view counter app that is written in [Python](https://www.python.org/) using [Flask](https://flask.palletsprojects.com/) framework, packaged using [Docker](https://www.docker.com/).
 
 ## Packaging
 
