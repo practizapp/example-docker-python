@@ -1,6 +1,6 @@
 # Example Django Docker
 
-This is a hello world app that is written in Javascript using [Python](https://www.python.org/) framework, packaged using [Docker](https://www.docker.com/).
+This is a hello world app that is written in [Python](https://www.python.org/), using [Django](https://www.djangoproject.com/) framework, packaged using [Docker](https://www.docker.com/).
 
 ## Packaging
 
