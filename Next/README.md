@@ -18,10 +18,16 @@ This is packaged by using the [Node.js container image](https://hub.docker.com/_
 
 ## Running
 
-This project doesn't have a specific modes to run.
+### Development
 
 ```
 docker compose up --build
+```
+
+### Production
+
+```
+docker compose --file docker-compose.prod.yml up --build
 ```
 
 ## Customizing
