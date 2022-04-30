@@ -2,9 +2,13 @@
 
 This is a hello world app that is written in [Node.js](https://nodejs.org/) using [Express](https://expressjs.com/) framework, packaged using [Docker](https://www.docker.com/).
 
+## Packaging
+
+This is packaged by using the [Node.js container image](https://hub.docker.com/_/node) as a base, copying the source code and installs necessary dependencies of this app and adds a startup script in the end.
+
 ## Running
 
-There are 2 build modes for building this image, "development" and "production", It's up to the developers to define how their apps would behave under development environment and production environment. For example, development mode may use [SQLite](https://www.sqlite.org/) as a database whereas in production, the app will use [PostgreSQL](https://www.postgresql.org/).
+There are 2 modes for running this project, "development" and "production", It's up to the developers to define how their apps would behave under development environment and production environment. For example, development mode may use [SQLite](https://www.sqlite.org/) as a database whereas in production, the app will use [PostgreSQL](https://www.postgresql.org/).
 
 Because this is just a hello world app, For the sake of simplicity, setting the build mode to "development" or "production" will not change the app behavior.
 
