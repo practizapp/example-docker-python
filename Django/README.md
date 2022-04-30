@@ -21,7 +21,6 @@ docker compose up --build
 ### Production
 
 ```
-
 docker compose --file docker-compose.prod.yml build
 docker compose --file docker-compose.prod.yml migrate
 docker compose --file docker-compose.prod.yml collectstatic
