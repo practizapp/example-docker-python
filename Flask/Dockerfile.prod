@@ -1,6 +1,6 @@
 ARG PYTHON_VERSION
 FROM python:${PYTHON_VERSION}
-RUN useradd --create-home --shell /bin/nologin \
+RUN useradd --create-home --shell /bin/false \
     --system --home-dir /app app
 WORKDIR /app
 COPY --chown=app:app ./src/requirements.txt /app/

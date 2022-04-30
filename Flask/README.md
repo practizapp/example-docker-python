@@ -32,14 +32,19 @@ Docker images can be customized using environment variables or customized during
 
 | Key | Description |
 | --- | --- |
-| MYSQL_HOST | Hostname of the database server. |
-| MYSQL_USER | Username that will be used to log in into the database server. |
-| MYSQL_PASSWORD | Password that will be used to log in into the database server. |
-| MYSQL_DATABASE | Database that will be used for storing data. |
-| BIND_ADDR | IP Address to bind into. |
+| `MYSQL_HOST` | Hostname of the database server. |
+| `MYSQL_USER` | Username that will be used to log in into the database server. |
+| `MYSQL_PASSWORD` | Password that will be used to log in into the database server. |
+| `MYSQL_DATABASE` | Database that will be used for storing data. |
+| `BIND_ADDR` | IP Address to bind into. |
 
 ### Build Arguments
 
 | Key | Description |
 | --- | --- |
 | `PYTHON_VERSION` | The version of Python that will be used for building this image, note that Python 2 is not supported. |
+
+## Screenshots
+
+![View Counter](.assets/flask_view_count.png)
+![Docker logs](.assets/flask_logs.png)
