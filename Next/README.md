@@ -1,34 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Example Next.js Docker
 
-## Getting Started
+This is a hello world app that is written in Javascript using [Next.js](https://nextjs.org/) framework, packaged using [Docker](https://www.docker.com/).
 
-First, run the development server:
+## Generating Next.js Apps
 
-```bash
-npm run dev
-# or
-yarn dev
+Next.js uses [Node.js](https://nodejs.org/) to transpile the source code into Javascript code that can run in client's web browser and to run server-side code. Make sure to have Node.js installed and its package manager, `npm`.
+
+Then execute the `create-react-app` script to bootstrap a starter Next app.
+
+```
+npx create-next-app project-name
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Packaging
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This is packaged by using the [Node.js container image](https://hub.docker.com/_/node) as a base, copying the source code and installs necessary dependencies of this app, and transpile the source code into static files that can be deployed into any webservers. Unlike React, Next.js can have a component that is running on the server side so we'll keep the Node.js runtime in the container.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Running
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+This project doesn't have a specific modes to run.
 
-## Learn More
+```
+docker compose up --build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Customizing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Docker images can be customized using environment variables or customized during build time using build arguments.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Environment Variables
 
-## Deploy on Vercel
+No environment variables available.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Build Arguments
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| Key | Description |
+| --- | --- |
+| `NODE_VERSION` | The version of Node.js that will be used for building this image. |
