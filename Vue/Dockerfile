@@ -1,9 +1,9 @@
 ARG NODE_VERSION
 FROM node:${NODE_VERSION} as builder
-ARG NODE_ENV
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 RUN set -ex; \
+    npm install @vue/cli-service; \
     npm install; \
     npm run build
 
