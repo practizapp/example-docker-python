@@ -38,6 +38,15 @@ Then you can import express from the `express` module.
 const express = require('express');
 ```
 
+## Code-base structure
+
+```
+project-name/           # The project's root directory
+├───package-lock.json   # Dependency lock file
+├───package.json        # Dependency file
+└───server.js           # Main app
+```
+
 ## Packaging
 
 This is packaged by using the [Node.js container image](https://hub.docker.com/_/node) as a base, copying the source code and installs necessary dependencies of this app and adds a startup script in the end.

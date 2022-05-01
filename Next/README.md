@@ -32,6 +32,19 @@ Then execute the `create-next-app` script to bootstrap a starter Next app.
 npx create-next-app project-name
 ```
 
+## Code-base structure
+
+```
+project-name/           # The project's root directory
+├───pages/              # Next.js template and API directory
+│   └───api/            # The API directory
+├───public/             # Static files directory
+├───styles/             # The project's source directory
+├───next.config.js      # Next.js configuration file
+├───package-lock.json   # Dependency lock file
+└───package.json        # Dependency file
+```
+
 ## Packaging
 
 This is packaged by using the [Node.js container image](https://hub.docker.com/_/node) as a base, copying the source code and installs necessary dependencies of this app, and transpile the source code into static files that can be deployed into any webservers. Unlike React, Next.js can have a component that is running on the server side so we'll keep the Node.js runtime in the container.

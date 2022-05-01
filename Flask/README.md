@@ -57,6 +57,16 @@ Then you can import Flask in your code.
 import flask
 ```
 
+## Code-base structure
+
+```
+project-name/               # The project's root directory
+└───src/                    # The project's app directory
+    ├───init.sql            # Initial database
+    ├───requirements.txt    # Requirements for the project
+    └───main.py             # Main app
+```
+
 ## Packaging
 
 This is packaged by using the [Python container image](https://hub.docker.com/_/python) as a base, copying the source code and installs necessary dependencies of this app and adds a startup script.

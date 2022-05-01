@@ -32,6 +32,19 @@ Then execute the `create-react-app` script to bootstrap a starter React app.
 npx create-react-app project-name
 ```
 
+## Code-base structure
+
+```
+project-name/           # The project's root directory
+├───public/             # Static files directory
+├───src/                # The project's source directory
+│   ├───App.css         # The main application's CSS file
+│   ├───App.js          # The main application
+│   └───App.test.js     # The main application's test file
+├───package-lock.json   # Dependency lock file
+└───package.json        # Dependency file
+```
+
 ## Packaging
 
 This is packaged by using the [Node.js container image](https://hub.docker.com/_/node) as a base, copying the source code and installs necessary dependencies of this app, and transpile the source code into static files that can be deployed into any webservers. After that the build is transferred into an [Nginx container image](https://hub.docker.com/_/nginx).

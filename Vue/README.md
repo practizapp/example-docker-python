@@ -34,6 +34,21 @@ npm install -g vue-cli
 vue create project-name
 ```
 
+## Code-base structure
+
+```
+project-name/           # The project's root directory
+├───public/             # Static files directory
+├───src/                # The project's source directory
+│   ├───assets/         # Assets directory
+│   └───components/     # Components directory
+├───babel.config.js     # Babel configuration file
+├───jsconfig.json       # JavaScript configuration file
+├───package-lock.json   # Dependency lock file
+├───package.json        # Dependency file
+└───vue.config.js       # Vue.js configuration file
+```
+
 ## Packaging
 
 This is packaged by using the [Node.js container image](https://hub.docker.com/_/node) as a base, copying the source code and installs necessary dependencies of this app, and transpile the source code into static files that can be deployed into any webservers. After that the build is transferred into an [Nginx container image](https://hub.docker.com/_/nginx).
