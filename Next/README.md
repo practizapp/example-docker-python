@@ -23,12 +23,6 @@ nvm install --lts
 #### Generating a Next project
 
 ```
-vue create project-name
-```
-
-Then execute the `create-next-app` script to bootstrap a starter Next app.
-
-```
 npx create-next-app project-name
 ```
 

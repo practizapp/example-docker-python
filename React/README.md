@@ -23,12 +23,6 @@ nvm install --lts
 #### Generating a React project
 
 ```
-vue create project-name
-```
-
-Then execute the `create-react-app` script to bootstrap a starter React app.
-
-```
 npx create-react-app project-name
 ```
 
