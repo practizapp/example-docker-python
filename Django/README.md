@@ -63,6 +63,22 @@ import django
 django-admin startproject project-name
 ```
 
+## Code-base structure
+
+```
+project-name/           # The project's root directory
+├───hello_world/        # The project's app directory
+│   ├───__init__.py     # Module for the app
+│   ├───asgi.py         # ASGI entrypoint
+│   ├───settings.py     # Django settings
+│   ├───urls.py         # URL patterns
+│   └───wsgi.py         # WSGI entrypoint
+├───manage.py           # Django's management script
+└───requirements.txt    # Requirements for the project
+```
+```
+
+
 ## Packaging
 
 This is packaged by using the [Python container image](https://hub.docker.com/_/python) as a base, copying the source code and installs necessary dependencies of this app and adds a startup script.
