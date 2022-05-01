@@ -6,7 +6,27 @@ This is a hello world app that is written in Javascript using [Next.js](https://
 
 Next.js uses [Node.js](https://nodejs.org/) to transpile the source code into Javascript code that can run in client's web browser and to run server-side code. Make sure to have Node.js installed and its package manager, `npm`.
 
-Then execute the `create-react-app` script to bootstrap a starter Next app.
+### Installing Node.js
+
+#### Installing Nvm
+
+Refer to the [Nvm](https://github.com/nvm-sh/nvm#install--update-script) documentation for how to install Nvm.
+
+#### Installing Node.js
+
+It's a good practice to install the LTS version of Node.js.
+
+```
+nvm install --lts
+```
+
+#### Generating a Next project
+
+```
+vue create project-name
+```
+
+Then execute the `create-next-app` script to bootstrap a starter Next app.
 
 ```
 npx create-next-app project-name
