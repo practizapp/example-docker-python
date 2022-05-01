@@ -90,19 +90,19 @@ In production, [Gunicorn](https://gunicorn.org/) is used as the server, [Nginx](
 ### Development
 
 ```
-docker compose up db -d
-docker compose run app python manage.py migrate
-docker compose up --build
+docker-compose up db -d
+docker-compose run app python manage.py migrate
+docker-compose up --build
 ```
 
 ### Production
 
 ```
-docker compose --file docker-compose.prod.yml build
-docker compose --file docker-compose.prod.yml up db -d
-docker compose --file docker-compose.prod.yml run app python manage.py migrate
-docker compose --file docker-compose.prod.yml run app python manage.py collectstatic
-docker compose --file docker-compose.prod.yml up
+docker-compose --file docker-compose.prod.yml build
+docker-compose --file docker-compose.prod.yml up db -d
+docker-compose --file docker-compose.prod.yml run app python manage.py migrate
+docker-compose --file docker-compose.prod.yml run app python manage.py collectstatic
+docker-compose --file docker-compose.prod.yml up
 ```
 
 ## Customizing

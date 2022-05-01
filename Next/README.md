@@ -48,13 +48,13 @@ This is packaged by using the [Node.js container image](https://hub.docker.com/_
 ### Development
 
 ```
-docker compose up --build
+docker-compose up --build
 ```
 
 ### Production
 
 ```
-docker compose --file docker-compose.prod.yml up --build
+docker-compose --file docker-compose.prod.yml up --build
 ```
 
 ## Customizing

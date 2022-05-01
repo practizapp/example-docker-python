@@ -60,13 +60,13 @@ Because this is just a hello world app, For the sake of simplicity, setting the 
 ### Development
 
 ```
-docker compose up --build
+docker-compose up --build
 ```
 
 ### Production
 
 ```
-docker compose --file docker-compose.prod.yml up --build
+docker-compose --file docker-compose.prod.yml up --build
 ```
 
 ## Customizing

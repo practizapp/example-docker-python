@@ -80,13 +80,13 @@ In production, [Gunicorn](https://gunicorn.org/) is used as the server and bytec
 ### Development
 
 ```
-docker compose up --build
+docker-compose up --build
 ```
 
 ### Production
 
 ```
-docker compose --file docker-compose.prod.yml up --build
+docker-compose --file docker-compose.prod.yml up --build
 ```
 
 ## Customizing

@@ -48,7 +48,7 @@ This is packaged by using the [Node.js container image](https://hub.docker.com/_
 This project doesn't have a specific modes to run.
 
 ```
-docker compose up --build
+docker-compose up --build
 ```
 
 ## Customizing
