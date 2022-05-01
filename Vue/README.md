@@ -6,10 +6,31 @@ This is a hello world app that is written in Javascript using [Vue.js](https://v
 
 Vue.js uses [Node.js](https://nodejs.org/) to transpile the source code into Javascript code that can run in client's web browser. Make sure to have Node.js installed and its package manager, `npm`.
 
+### Installing Node.js
+
+#### Installing Nvm
+
+Refer to the [Nvm](https://github.com/nvm-sh/nvm#install--update-script) documentation for how to install Nvm.
+
+#### Installing Node.js
+
+It's a good practice to install the LTS version of Node.js.
+
+```
+nvm install --lts
+```
+
+#### Installing Vue.js
+
 Install `vue-cli` to easily bootstrap a Vue.js project.
 
 ```
 npm install -g vue-cli
+```
+
+#### Generating a Vue.js project
+
+```
 vue create project-name
 ```
 
