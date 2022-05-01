@@ -6,6 +6,26 @@ This is a hello world app that is written in Javascript using [React](https://re
 
 React uses [Node.js](https://nodejs.org/) to transpile the source code into Javascript code that can run in client's web browser. Make sure to have Node.js installed and its package manager, `npm`.
 
+### Installing Node.js
+
+#### Installing Nvm
+
+Refer to the [Nvm](https://github.com/nvm-sh/nvm#install--update-script) documentation for how to install Nvm.
+
+#### Installing Node.js
+
+It's a good practice to install the LTS version of Node.js.
+
+```
+nvm install --lts
+```
+
+#### Generating a React project
+
+```
+vue create project-name
+```
+
 Then execute the `create-react-app` script to bootstrap a starter React app.
 
 ```
