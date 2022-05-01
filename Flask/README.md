@@ -2,6 +2,57 @@
 
 This is a view counter app that is written in [Python](https://www.python.org/) using [Flask](https://flask.palletsprojects.com/) framework, packaged using [Docker](https://www.docker.com/).
 
+## Creating a Flask App
+
+### Installing Python
+
+Make sure to have Python installed and its package manager, `pip`.
+
+```
+python --version
+pip --version
+```
+
+If the above command yields an error, install Python.
+
+#### Debian-based distributions (Debian, Ubuntu, etc.)
+
+```
+sudo apt install python3 python3-pip
+```
+
+#### Red Hat-based distributions (CentOS, Fedora, etc.)
+
+```
+sudo yum install python3 python3-pip
+```
+
+#### Other Linux distributions
+
+Refer to your Linux distribution's documentation for how to install Python.
+
+### Installing Flask
+
+#### Create a virtual environment
+
+```
+python3 -m venv venv
+```
+
+#### Activate the virtual environment
+
+```
+source venv/bin/activate 
+```
+
+#### Install Flask
+
+```
+pip install flask
+```
+
+Then you can import Flask in your code.
+
 ## Packaging
 
 This is packaged by using the [Python container image](https://hub.docker.com/_/python) as a base, copying the source code and installs necessary dependencies of this app and adds a startup script.
