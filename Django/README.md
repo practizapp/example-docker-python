@@ -76,8 +76,6 @@ project-name/           # The project's root directory
 ├───manage.py           # Django's management script
 └───requirements.txt    # Requirements for the project
 ```
-```
-
 
 ## Packaging
 
