@@ -53,6 +53,10 @@ pip install flask
 
 Then you can import Flask in your code.
 
+```
+import flask
+```
+
 ## Packaging
 
 This is packaged by using the [Python container image](https://hub.docker.com/_/python) as a base, copying the source code and installs necessary dependencies of this app and adds a startup script.

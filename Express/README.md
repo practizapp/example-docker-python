@@ -2,6 +2,42 @@
 
 This is a hello world app that is written in [Node.js](https://nodejs.org/) using [Express](https://expressjs.com/) framework, packaged using [Docker](https://www.docker.com/).
 
+## Creating an Express App
+
+### Installing Node.js
+
+#### Installing Nvm
+
+Refer to the [Nvm](https://github.com/nvm-sh/nvm#install--update-script) documentation for how to install Nvm.
+
+#### Installing Node.js
+
+It's a good practice to install the LTS version of Node.js.
+
+```
+nvm install --lts
+```
+
+### Installing Express
+
+#### Create a directory for your app
+
+```
+mkdir express-app
+```
+
+#### Install Express
+
+```
+npm install express
+```
+
+Then you can import express from the `express` module.
+
+```
+const express = require('express');
+```
+
 ## Packaging
 
 This is packaged by using the [Node.js container image](https://hub.docker.com/_/node) as a base, copying the source code and installs necessary dependencies of this app and adds a startup script in the end.
