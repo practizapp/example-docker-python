@@ -12,6 +12,7 @@ services:
       - POSTGRES_USERNAME=app
       - POSTGRES_PASSWORD=app
       - POSTGRES_HOST=db
+      - SKIP_COLLECTSTATIC=true
     depends_on:
       - db
     restart: unless-stopped

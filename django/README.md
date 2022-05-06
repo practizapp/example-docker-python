@@ -90,19 +90,13 @@ In production, [Gunicorn](https://gunicorn.org/) is used as the server, [Nginx](
 ### Development
 
 ```
-docker-compose up db -d
-docker-compose run app python manage.py migrate
 docker-compose up --build
 ```
 
 ### Production
 
 ```
-docker-compose --file docker-compose.prod.yml build
-docker-compose --file docker-compose.prod.yml up db -d
-docker-compose --file docker-compose.prod.yml run app python manage.py migrate
-docker-compose --file docker-compose.prod.yml run app python manage.py collectstatic
-docker-compose --file docker-compose.prod.yml up
+docker-compose --file docker-compose.prod.yml up --build
 ```
 
 ## Customizing
@@ -118,6 +112,10 @@ Docker images can be customized using environment variables or customized during
 | `POSTGRES_PASSWORD` | Password that will be used to log in into the database server. |
 | `POSTGRES_PORT` | Port number that is used to connect to database server. |
 | `POSTGRES_DBNAME` | Database that will be used for storing data. |
+| `PORT` | Port number that is used to run the server, default to `8000`. |
+| `SKIP_COLLECTSTATIC` | Skip collectstatic if set to anything. |
+| `SKIP_MIGRATION` | Skip migration if set to anything. |
+| `USE_WSGI` | Use WSGI instead of Python development server if set to anything, is set when using the production Dockerfile. |
 
 ### Build Arguments
 
