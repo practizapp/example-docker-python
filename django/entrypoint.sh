@@ -7,7 +7,7 @@ while ! pg_isready -q -h ${POSTGRES_HOST:-postgres} -p ${POSTGRES_PORT:-5432} -U
 done
 
 if [ -z "${SKIP_MIGRATION}" ]; then
-    python manage.py migrate
+    python manage.py migrate --noinput
 fi
 
 if [ -z "${SKIP_COLLECTSTATIC}" ]; then
